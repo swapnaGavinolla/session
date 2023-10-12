@@ -1,4 +1,5 @@
 source common.sh
+code_dir=(pwd)
 
 head "coping mongo repo"
 copy code_dir/mongo.repo /etc/yum.repos.d/mongo.repo &>>log_file

@@ -3,7 +3,7 @@ head() {
 }
 rm -rf /tmp/roboshop.log
 log_file=/tmp/roboshop.log
-code_dir=(pwd)
+
 validate() {
     if [ $1 == 0 ]; then
         head "success"
