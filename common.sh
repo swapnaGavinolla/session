@@ -1,6 +1,7 @@
 head() {
     echo -e "\e[31m$1\e[0m"
 }
+code_dir=(pwd)
 rm -rf /tmp/roboshop.log
 log_file=/tmp/roboshop.log
 
