@@ -1,6 +1,6 @@
 source common.sh
 code_dir=(pwd)
-
+echo $code_dir
 head "coping mongo repo"
 cp ${code_dir}/mongo.repo /etc/yum.repos.d/mongo.repo &>>$log_file
 validate $?
