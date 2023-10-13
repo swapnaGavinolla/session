@@ -9,7 +9,7 @@ validate() {
     if [ $1 == 0 ]; then
         head "success"
     else
-        head -e "\e[31m failure\e[0m"
+        head failure
         exit 1
     fi
 }
