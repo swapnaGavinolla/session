@@ -10,13 +10,15 @@ validate $?
 
 
 head"adding user"
-user "$(id roboshop)"
+id roboshop
+user $?
 
 head "creating directory"
-dir $? app/
-mkdir /app &>>$log_file
+cd /app
+dir $?
 
-
+head "deleting old content"
+rm -rf /app/*
 
 head "downloading application code"
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$log_file

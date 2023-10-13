@@ -24,7 +24,8 @@ user(){
 
 dir(){
     if [ $1 == 0 ]; then
-    echo " app already exists"
-    exit 1
+         echo " app already exists"
+    else 
+        mkdir /app &>>$log_file
     fi
 }
