@@ -25,6 +25,7 @@ head "downloading application code"
 curl -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip &>>$log_file
 validate $?
 
+cd /app
 
 head "unzipping"
 unzip /tmp/user.zip &>>$log_file
