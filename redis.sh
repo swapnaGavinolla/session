@@ -13,7 +13,7 @@ yum install redis -y &>>$log_file
 validate $?
 
 head "updating redis listening addresss"
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf  /etc/redis/redis.conf &>>$log_file
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf &>>$log_file
 validate $?
 
 head "enabling "
