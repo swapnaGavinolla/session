@@ -21,7 +21,8 @@ head "starting"
 systemctl start mysqld &>>$log_file
 validate $?
 
+head "password setting"
 mysql_secure_installation --set-root-pass RoboShop@1 &>>$log_file
-
+validate $?
 
 

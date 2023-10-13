@@ -20,5 +20,10 @@ head "starting"
 systemctl start rabbitmq-server  &>>$log_file
 validate $?
 
+head "adding user"
 rabbitmqctl add_user roboshop roboshop123 &>>$log_file
+validate $?
 
+head "setting permissions"
+rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
+validate $?

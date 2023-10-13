@@ -24,6 +24,7 @@ head "downloading application code"
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$log_file
 validate $?
 
+cd /app
 
 head "unzipping"
 unzip /tmp/catalogue.zip &>>$log_file
@@ -61,7 +62,7 @@ yum install mongodb-org-shell -y &>>$log_file
 validate $?
 
 head "loading schema"
-mongo --host 172.31.22.208 < /app/schema/catalogue.js &>>$log_file
+mongo --host 172.31.25.156 < /app/schema/catalogue.js &>>$log_file
 validate $?
 
 
