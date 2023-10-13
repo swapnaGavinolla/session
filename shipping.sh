@@ -54,7 +54,7 @@ yum install mysql -y &>>$log_file
 validate $?
 
 head "loading schema"
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/schema/shipping.sql &>>$log_file
+mysql -h 172.31.21.13 -uroot -pRoboShop@1 < /app/schema/shipping.sql &>>$log_file
 validate $?
 
 head "restating"
