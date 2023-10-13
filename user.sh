@@ -9,15 +9,16 @@ yum install nodejs -y &>>$log_file
 validate $?
 
 
-head"adding user"
-user $? id roboshop
-useradd roboshop &>>$log_file
-
+head "adding user"
+id roboshop
+user $?
 
 head "creating directory"
-dir $? app/
-mkdir /app &>>$log_file
+cd /app
+dir $?
 
+head "deleting old content"
+rm -rf /app/*
 
 
 head "downloading application code"

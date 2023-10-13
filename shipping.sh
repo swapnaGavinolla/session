@@ -4,14 +4,16 @@ head "installing maven"
 yum install maven -y &>>$log_file
 validate $?
 
-head"adding user"
-user $? id roboshop
-useradd roboshop &>>$log_file
-
+head "adding user"
+id roboshop
+user $?
 
 head "creating directory"
-dir $? app/
-mkdir /app &>>$log_file
+cd /app
+dir $?
+
+head "deleting old content"
+rm -rf /app/*
 
 head "Downloading the application code"
 curl -L -o /tmp/shipping.zip https://roboshop-builds.s3.amazonaws.com/shipping.zip &>>$log_file
