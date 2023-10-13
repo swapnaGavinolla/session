@@ -21,7 +21,7 @@ user(){
     fi
 }
 
-user(){
+dir(){
     if [ $1 == 0 ]:then
     echo " app already exists"
     exit 1
