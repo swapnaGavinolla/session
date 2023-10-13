@@ -42,11 +42,11 @@ systemctl daemon-reload &>>$log_file
 validate $?
 
 head "enabling"
-systemctl enable user &>>$log_file
+systemctl enable shipping  &>>$log_file
 validate $?
 
 head "strating"
-systemctl start user &>>$log_file
+systemctl start shipping &>>$log_file
 validate $?
 
 head "mysql client"
