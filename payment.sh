@@ -6,11 +6,11 @@ validate $?
 
 head "adding user"
 id roboshop
-user $?
+user $?  &>>$log_file
 
 head "creating directory"
 cd /app
-dir $?
+dir $?  &>>$log_file
 
 head "deleting old content"
 rm -rf /app/*
