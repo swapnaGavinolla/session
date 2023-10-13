@@ -4,11 +4,11 @@ yum install nginx -y &>>$log_file
 validate $?
 
 head "enabling"
-systemctl enable user &>>$log_file
+systemctl enable nginx &>>$log_file
 validate $?
 
 head "strating"
-systemctl start user &>>$log_file
+systemctl start nginx  &>>$log_file
 validate $?
 
 head "removing old data"
