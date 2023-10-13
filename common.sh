@@ -15,14 +15,15 @@ validate() {
 }
 
 user(){
-    if [ $1 == 0 ]:then
-    echo " user already exists"
-    exit 1
+    if [ $1 == 0 ]; then
+        echo " user already exists"
+    else
+        useradd roboshop &>>$log_file
     fi
 }
 
 dir(){
-    if [ $1 == 0 ]:then
+    if [ $1 == 0 ]; then
     echo " app already exists"
     exit 1
     fi

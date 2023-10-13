@@ -10,9 +10,7 @@ validate $?
 
 
 head"adding user"
-user $? id roboshop
-useradd roboshop &>>$log_file
-
+user "$(id roboshop)"
 
 head "creating directory"
 dir $? app/
