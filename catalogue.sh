@@ -9,7 +9,7 @@ yum install nodejs -y &>>$log_file
 validate $?
 
 
-head"adding user"
+head "adding user"
 id roboshop
 user $?
 
