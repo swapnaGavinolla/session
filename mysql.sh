@@ -14,11 +14,11 @@ validate $?
 
 
 head "enabling "
-systemctl enable mysql  &>>$log_file
+systemctl enable mysqld  &>>$log_file
 validate $?
 
 head "starting"
-systemctl start mysql &>>$log_file
+systemctl start mysqld &>>$log_file
 validate $?
 
 mysql_secure_installation --set-root-pass RoboShop@1 &>>$log_file
