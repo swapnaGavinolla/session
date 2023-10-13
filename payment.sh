@@ -42,9 +42,9 @@ systemctl daemon-reload &>>$log_file
 validate $?
 
 head "enabling"
-systemctl enable user &>>$log_file
+systemctl enable payment &>>$log_file
 validate $?
 
 head "strating"
-systemctl start user &>>$log_file
+systemctl start payment &>>$log_file
 validate $?
