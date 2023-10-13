@@ -26,6 +26,7 @@ head "downloading application code"
 curl -o /tmp/cart.zip https://roboshop-builds.s3.amazonaws.com/cart.zip &>>$log_file
 validate $?
 
+cd /app
 
 head "unzipping"
 unzip /tmp/cart.zip &>>$log_file
